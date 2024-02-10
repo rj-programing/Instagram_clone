@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:instagram_clone/mobilescreenlayout.dart';
+import 'package:instagram_clone/webscreenlayout.dart';
+import 'responsive.dart';
+import 'dimensions.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,11 +15,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-
-        home: Scaffold(
-          body: Container(),
-        )
-
+    debugShowCheckedModeBanner: false,
+        theme: ThemeData.dark(),
+       home: const ResponsiveLayot(mobileScreenLayout: MobileScreenLayout(),webScreenLayout: WebScreenLayout(),),
     );
   }
 }
